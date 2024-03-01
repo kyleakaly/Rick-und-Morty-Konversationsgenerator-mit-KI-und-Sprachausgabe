@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 100%;
+  min-height: 100vh;
+  background-image: url('./img/rick_fondo.png');
+  justify-content: center;
+  background-position: right center;
+  font-family: 'Shadows Into Light', cursive;
+  overflow: hidden;
+}
+
+.container{
+  background-color: rgba(255, 255, 255, 0.719);
+  box-shadow: 0px 10px 20px 2px black ;
+  width: 1200px;
+  height: 100vh;
+  border-radius: 20px 20px 0px 0px;
+
+
+}
+
+header{
+
+  display: flex;
+flex-direction: column;
+flex-wrap: nowrap;
+justify-content: center;
+align-items: center;
+
+}
+
+header a {
+
+  text-align: center;
+
+}
+
+.header-img{
+
+  width: 60%;
+
+}
+
+.header-img:hover{
+animation: animarlogo linear 300ms 1;
+}
+@keyframes animarlogo {
+  0%{
+transform: rotate(2deg);
+  }
+  50%{
+    transform: rotate(0deg);
+
+  }
+  70%{
+    transform: rotate(-2deg);
+      }
+      100%{
+        transform: rotate(0deg);
+    
+      }
+}
+.container h1 {
+
+  color: black;
+  text-align: center;
+
+}
+
+.encerrartodo{
+
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+
+}
+
+form{
+
+  padding: 36px;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+
+}
+
+form button {
+
+  border-radius: 50px;
+  border: 1px solid #b2df2a;
+  padding: 4px;
+  border-top: 0;
+  border-right: 0;
+  border-left: 0;
+  background-color: transparent;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 22px;
+  width: 120px;
+  transition: transform 300ms;
+  cursor: pointer;
+  background-color: white;
+
+
+
+}
+
+form button:hover{
+
+  border-bottom: 1px solid #02b5cc;
+transform: scale(1.1);
+
+}
+
+input[type=text]{
+  
+  border: 1px solid #000000;
+  padding: 10px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+ 
+  color: black;
+  border-radius: 50px;
+  width: 800px;
+  font-size: 24px;
+  font-family: 'Shadows Into Light', cursive;
+  background-color: rgb(255, 255, 255);
+  
+}
+
+input[type=text]::placeholder{
+
+  color: black;
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Shadows Into Light', cursive;
+  
+
+}
+
+input:focus {
+  /* Estilos cuando el input está seleccionado */
+  border: 1px solid #b2df2a!important;
+  border-bottom: 0;
+  border-right: 0;
+  border-left: 0;
+  
+}
+
+.imagen1 {
+  width: 1000px;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  left: 4%;
+  bottom: 0;
+ opacity: 1;
+}
+
+.imagen2{
+  width: 1000px;
+  position: absolute;
+  top: 50%;
+  right:0;
+  left: 54%;
+  bottom: 0;
+  z-index: 0;
+
+}
+
+.conversacioncontainertexto{
+width: 700px;
+  padding: 46px;
+
+}
+
+.conversaciontexto   {
+
+  color: black;
+  font-size: 24px;
+
+
+}
+
+.hablando {
+  animation: movimientoArribaAbajo 1s ease-in-out infinite;
+}
+
+@keyframes movimientoArribaAbajo {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+/* loader  */
+
+.lds-facebook {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0px auto;
+}
+.lds-facebook div {
+  display: inline-block;
+  position: absolute;
+  left: 8px;
+  width: 16px;
+  background: rgb(0, 0, 0);
+  animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+.lds-facebook div:nth-child(1) {
+  left: 8px;
+  animation-delay: -0.24s;
+}
+.lds-facebook div:nth-child(2) {
+  left: 32px;
+  animation-delay: -0.12s;
+}
+.lds-facebook div:nth-child(3) {
+  left: 56px;
+  animation-delay: 0;
+}
+@keyframes lds-facebook {
+  0% {
+    top: 8px;
+    height: 64px;
+  }
+  50%, 100% {
+    top: 24px;
+    height: 32px;
+  }
+}
